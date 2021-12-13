@@ -1,0 +1,2 @@
+log_file_dir : ./logger/
+log_file_name : film_logger

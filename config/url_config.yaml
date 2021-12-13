@@ -1,0 +1,11 @@
+## API ####
+http_service_port : 10000
+grpc_service_port : localhost:50001
+
+
+url_search_by_param: "/v1/search/"
+url_get_detail_film: "/v1/detail/film/"
+
+url_omdb_search_by_param: "http://www.omdbapi.com/?"
+
+

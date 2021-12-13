@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+
+package models;
+
+option go_package = "/models";
+
+service FilmManagement {
+    rpc SearchByParamGrpc (RequestParameter) returns (ListFilm) {}
+    rpc GetDetailFilmGrpc (RequestParameter) returns (DetailFilm) {}
+}
+
+message RequestParameter {
+    string ApiKey = 1;
+    string ImdbID = 2;
+    string Title = 3 ;
+    string Page = 4;
+}
+
+
+message ListFilm {
+    repeated DetailFilm Search = 1;
+    int32 TotalResult = 2;
+    string response = 3;
+}
+
+message Film {
+    string Title = 1;
+    string Year = 2;
+    string imdbID = 3; 
+    string  Poster = 4;
+}
+  
+message DetailFilm {
+    string Title = 1;
+    string Year = 2 ;
+    string Rated = 3 ;
+    string Release = 4;
+    string Runtime = 5;
+    string Genre = 6;
+    string Director = 7;
+    string Wrter = 8;
+    string Actory = 9;
+    string Language = 10;
+    string Country = 11;
+    string Awards = 12;
+    string Poster = 13;
+    string ImdbRating = 14;
+    string ImdbID = 15;
+    string response = 16;
+}
